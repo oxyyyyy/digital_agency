@@ -33,6 +33,7 @@ gulp.task('scripts', function() {
             'node_modules/tether/dist/js/tether.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/wowjs/dist/wow.min.js',
+            'src/js/navbar.js',
             '!src/libs/modernizr-custom.js'
         ])
         .pipe(concat('libs.min.js'))
@@ -42,7 +43,8 @@ gulp.task('scripts', function() {
 
 gulp.task('concatCssTaskLibs', function() {
     return gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'node_modules/animate.css/animate.min.css'
+            'node_modules/animate.css/animate.min.css',
+            'src/css/navbar.css'
         ])
         .pipe(concatCss('bundle.libs.css'))
         .pipe(gulp.dest('src/css'));

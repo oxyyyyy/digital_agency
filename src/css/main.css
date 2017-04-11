@@ -34,6 +34,7 @@ a {
 .btn_own {
   font-family: Roboto-Regular;
   font-size: 15px;
+  color: #fff !important;
   text-transform: uppercase;
   background-color: transparent !important;
   border: none;

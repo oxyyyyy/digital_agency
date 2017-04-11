@@ -35,12 +35,29 @@ a {
   font-family: Roboto-Regular;
   font-size: 15px;
   text-transform: uppercase;
-  background-color: #ff5400;
+  background-color: transparent !important;
   border: none;
   border-radius: 100px;
-  padding: 15px 65px; }
-  .btn_own:hover {
+  padding: 15px 65px;
+  max-width: 275px;
+  margin: auto;
+  float: none;
+  border: 5px solid #ff5400; }
+  .btn_own:hover, .btn_own:visited, .btn_own:focus {
+    color: #fff;
     background-color: #ff5400; }
+
+#header_logo {
+  font-family: Raleway-Regular;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50px;
+  left: 5%; }
+  #header_logo span {
+    color: #ff5400;
+    font-family: Raleway-ExtraBold; }
 
 nav {
   font-family: Roboto-Regular; }
@@ -50,7 +67,7 @@ header {
   background-image: url("../img/header_bg.png");
   background-size: cover;
   color: #fff;
-  padding-top: 38vh; }
+  padding-top: 35vh; }
 
 .header_title {
   text-align: center; }
@@ -59,3 +76,6 @@ header {
     font-size: 75px;
     text-transform: uppercase;
     margin-bottom: 30px; }
+    @media (max-width: 400px) {
+      .header_title h1 {
+        font-size: 50px; } }

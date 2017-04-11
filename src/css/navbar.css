@@ -19,7 +19,7 @@ body {
 }
 
 a {
-  color: #9acd91;
+  color: #ff5400;
   text-decoration: none;
 }
 
@@ -51,7 +51,7 @@ Stretchy Nav style - common to:
   width: 60px;
   height: 60px;
   border-radius: 30px;
-  background: #9acd91;
+  background: #ff5400;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   -webkit-transition: height 0.2s, box-shadow 0.2s;
   -moz-transition: height 0.2s, box-shadow 0.2s;
@@ -171,11 +171,11 @@ Stretchy Nav style - common to:
 }
 .cd-stretchy-nav ul a::after {
   /* navigation item icons */
+  font-family: FontAwesome;
   content: '\f2cd';
   position: absolute;
-  height: 16px;
   width: 16px;
-  right: 22px;
+  right: 24px;
   top: 50%;
   -webkit-transform: translateY(-50%) scale(0);
   -moz-transform: translateY(-50%) scale(0);
@@ -183,8 +183,6 @@ Stretchy Nav style - common to:
   -o-transform: translateY(-50%) scale(0);
   transform: translateY(-50%) scale(0);
   opacity: .6;
-  font-family: FontAwesome;
-  /*background: url(../img/cd-sprite-1.svg) no-repeat 0 0;*/
 }
 .cd-stretchy-nav ul a::before {
   /* line visible next to the active navigation item */
@@ -199,23 +197,33 @@ Stretchy Nav style - common to:
   -ms-transform: translateX(3px) translateY(-50%) scaleY(0);
   -o-transform: translateX(3px) translateY(-50%) scaleY(0);
   transform: translateX(3px) translateY(-50%) scaleY(0);
-  background-color: #0a9581;
+  background-color: #fff;
 }
 .cd-stretchy-nav ul li:first-of-type a::after {
   /* change custom icon using image sprites */
   background-position: -32px 0;
+  font-family: FontAwesome;
+  content: '\f015';
 }
 .cd-stretchy-nav ul li:nth-of-type(2) a::after {
   background-position: -64px 0;
+  font-family: FontAwesome;
+  content: '\f009';
 }
 .cd-stretchy-nav ul li:nth-of-type(3) a::after {
   background-position: -48px 0;
+  font-family: FontAwesome;
+  content: '\f0b1';
 }
 .cd-stretchy-nav ul li:nth-of-type(4) a::after {
   background-position: 0 0;
+  font-family: FontAwesome;
+  content: '\f0c0';
 }
 .cd-stretchy-nav ul li:nth-of-type(5) a::after {
   background-position: -16px 0;
+  font-family: FontAwesome;
+  content: '\f095';
 }
 .cd-stretchy-nav ul span {
   /* navigation item labels */
@@ -362,7 +370,7 @@ add-content navigation style
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  background-color: #9acd91;
+  background-color: #ff5400;
 }
 .cd-stretchy-nav.add-content .cd-nav-trigger span {
   background-color: transparent;

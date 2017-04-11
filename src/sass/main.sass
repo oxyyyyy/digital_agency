@@ -11,13 +11,29 @@ a
   font-family: Roboto-Regular
   font-size: 15px
   text-transform: uppercase
-  background-color: $accent_color
+  background-color: transparent !important
   border: none
   border-radius: 100px
   padding: 15px 65px
-  &:hover
+  max-width: 275px
+  margin: auto
+  float: none
+  border: 5px solid $accent_color
+  &:hover, &:visited, &:focus
+    color: $font_white_color
     background-color: $accent_color
 
+#header_logo
+  font-family: Raleway-Regular
+  font-size: 30px
+  color: $font_white_color
+  text-transform: uppercase
+  position: absolute
+  top: 50px
+  left: 5%
+  span
+    color: $accent_color
+    font-family: Raleway-ExtraBold
 nav
   font-family: Roboto-Regular
 header
@@ -25,7 +41,7 @@ header
   background-image: url("../img/header_bg.png")
   background-size: cover
   color: $font_white_color
-  padding-top: 38vh
+  padding-top: 35vh
 .header_title
   text-align: center
   h1
@@ -33,3 +49,5 @@ header
     font-size: 75px
     text-transform: uppercase
     margin-bottom: 30px
+    @media (max-width: 400px)
+      font-size: 50px

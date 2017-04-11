@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <!-- Required meta tags -->
@@ -11,15 +11,42 @@
     <!-- Concatinated and minified stylesheets -->
     <link rel="stylesheet" href="css/bundle.libs.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!-- Font awesome -->
+    <script src="https://use.fontawesome.com/1c2707727b.js"></script>
 </head>
 
 <body>
 
-    <h1>Hello, world!</h1>
+    <a href="#" id="header_logo"><span>your</span>logo</a>
+
+    <nav class="cd-stretchy-nav">
+        <a class="cd-nav-trigger" href="#0">
+            <span aria-hidden="true"></span>
+        </a>
+        <ul>
+            <li><a href="#0" class="active"><span>Home</span></a></li>
+            <li><a href="#0"><span>Services</span></a></li>
+            <li><a href="#0"><span>Works</span></a></li>
+            <li><a href="#0"><span>Team</span></a></li>
+            <li><a href="#0"><span>Contact</span></a></li>
+            <!-- other list items here -->
+        </ul>
+        <span aria-hidden="true" class="stretchy-nav-bg"></span>
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="header_title">
+                <h1 class="wow fadeIn">we are a<br>digital agency</h1>
+                <a href="#" class="btn btn_own button button--aylen wow fadeIn" data-wow-delay="0.5s">see our portfolio</a>
+            </div>
+        </div>
+    </header>
 
     <!-- Concatinated and minified scripts -->
     <script src="js/libs.min.js"></script>
     <script src="js/my_main_scripts.js"></script>
 
 </body>
+
 </html>

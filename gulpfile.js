@@ -32,7 +32,7 @@ gulp.task('scripts', function() {
             'node_modules/jquery/dist/jquery.js',
             'node_modules/tether/dist/js/tether.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
-            'node_modules/wowjs/dist/wow.min.js',
+            'node_modules/wow.js/dist/wow.min.js',
             'src/js/navbar.js',
             '!src/libs/modernizr-custom.js'
         ])
@@ -43,8 +43,9 @@ gulp.task('scripts', function() {
 
 gulp.task('concatCssTaskLibs', function() {
     return gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css',
-            'node_modules/animate.css/animate.min.css',
-            'src/css/navbar.css'
+            'node_modules/wow.js/css/libs/animate.css',
+            'src/css/navbar.css',
+            'src/css/buttons.css'
         ])
         .pipe(concatCss('bundle.libs.css'))
         .pipe(gulp.dest('src/css'));
@@ -72,6 +73,12 @@ gulp.task('minCssLibs', ['concatCssTaskLibs'], function() {
 gulp.task('clean', function() {
     return del.sync('dist/**/*');
 });
+
+gulp.task('imgOpti', function () {
+  return gulp.src('src/img/**/*')
+          .pipe(imagemin())
+          .pipe(gulp.dest('dist/img'))
+});
 // -----------------------------------------------------------------------------------------------------------
 
 // Watch! ----------------------------------------------------------------------------------------------------
@@ -83,7 +90,7 @@ gulp.task('watch', ['browser-sync', 'minCss', 'minCssLibs', 'scripts'], function
 // -----------------------------------------------------------------------------------------------------------
 
 // Bulid! ----------------------------------------------------------------------------------------------------
-gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function() {
+gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs', 'imgOpti'], function() {
 
     var buildCss = gulp.src([
             'src/css/main.min.css',
@@ -111,7 +118,7 @@ gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function() {
                 progressive: true
             }),
             imagemin.optipng({
-                optimizationLevel: 10
+                optimizationLevel: 6
             }),
             imagemin.svgo({
                 plugins: [{
@@ -121,7 +128,10 @@ gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function() {
         ]))
         .pipe(gulp.dest('dist/img'));
 
-    var buildHtmlPhp = gulp.src('src/*')
+    var buildHtmlPhp = gulp.src([
+            'src/*.html',
+            'src/*.php'
+        ])
         .pipe(gulp.dest('dist/'));
 
 });

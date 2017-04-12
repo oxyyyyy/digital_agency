@@ -46,4 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Own types
 node_modules/
+*.psd

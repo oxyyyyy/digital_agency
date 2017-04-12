@@ -1,12 +1,51 @@
+// Copyright (c) 2017 Copyright Holder All Rights Reserved.
+// Author: Alexandr Vlasenko
+
 @import "_vars.sass"
 
+// Common styles
 body
   font-family: Raleway-Regular
 ul
   list-style: none
 a
   text-decoration: none !important
+// Section styles
+section
+  text-align: center
+  padding: 130px 0
+  font-family: Raleway-Regular
+  font-size: 15px
+  color: $font_light_color
+.bg_faded
+  background-color: $bg_darker_color
+.section_main_title
+  font-family: Raleway-Black
+  font-size: 33px
+  color: $font_dark_color
+  text-transform: uppercase
 
+
+// Preloader
+#page-preloader
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background: #fff
+    z-index: 50
+    overflow: hidden
+#page-preloader .spinner
+    width: 128px
+    height: 128px
+    position: absolute
+    left: 50%
+    top: 50%
+    background: url('../img/ripple.gif') no-repeat 50% 50%
+    margin: -64px 0 0 -64px
+
+// Buttons
 .btn_own
   font-family: Roboto-Regular
   font-size: 15px
@@ -20,11 +59,13 @@ a
   margin: auto
   float: none
   border: 5px solid $accent_color
+  z-index: 0
   &:hover, &:visited, &:focus
     color: $font_white_color
     background-color: $accent_color
 
-#header_logo
+// Header logo
+#header_logo, .title_logo_type
   font-family: Raleway-Regular
   font-size: 30px
   color: $font_white_color
@@ -35,8 +76,13 @@ a
   span
     color: $accent_color
     font-family: Raleway-ExtraBold
+
+// Nav in button
 nav
   font-family: Roboto-Regular
+  z-index: 30 !important
+
+// Header
 header
   height: 100vh
   background-image: url("../img/header_bg.png")
@@ -52,3 +98,32 @@ header
     margin-bottom: 30px
     @media (max-width: 400px)
       font-size: 50px
+
+// Section "services"
+section#services
+  .bullet
+    margin-top: 50px
+    .bullet_title
+      font-family: Raleway-Black
+      font-size: 23px
+      color: $font_dark_color
+      text-transform: uppercase
+      i
+        margin-right: 10px
+
+// Section "case_study"
+section#case_study
+  text-align: left
+  .title_logo_type
+    position: static
+    color: $font_dark_color
+    font-size: 25px
+    margin-top: 50px
+    span
+      color: inherit
+  .btn_own
+    color: $font_dark_color !important
+    margin: 0
+    margin-top: 20px
+    padding: 10px 30px
+    max-width: 200px

@@ -31,6 +31,41 @@ ul {
 a {
   text-decoration: none !important; }
 
+section {
+  text-align: center;
+  padding: 130px 0;
+  font-family: Raleway-Regular;
+  font-size: 15px;
+  color: #515151; }
+
+.bg_faded {
+  background-color: #f3f3f3; }
+
+.section_main_title {
+  font-family: Raleway-Black;
+  font-size: 33px;
+  color: #2d2d2d;
+  text-transform: uppercase; }
+
+#page-preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 50;
+  overflow: hidden; }
+
+#page-preloader .spinner {
+  width: 128px;
+  height: 128px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: url("../img/ripple.gif") no-repeat 50% 50%;
+  margin: -64px 0 0 -64px; }
+
 .btn_own {
   font-family: Roboto-Regular;
   font-size: 15px;
@@ -43,12 +78,13 @@ a {
   max-width: 275px;
   margin: auto;
   float: none;
-  border: 5px solid #ff5400; }
+  border: 5px solid #ff5400;
+  z-index: 0; }
   .btn_own:hover, .btn_own:visited, .btn_own:focus {
     color: #fff;
     background-color: #ff5400; }
 
-#header_logo {
+#header_logo, .title_logo_type {
   font-family: Raleway-Regular;
   font-size: 30px;
   color: #fff;
@@ -56,12 +92,13 @@ a {
   position: absolute;
   top: 50px;
   left: 5%; }
-  #header_logo span {
+  #header_logo span, .title_logo_type span {
     color: #ff5400;
     font-family: Raleway-ExtraBold; }
 
 nav {
-  font-family: Roboto-Regular; }
+  font-family: Roboto-Regular;
+  z-index: 30 !important; }
 
 header {
   height: 100vh;
@@ -80,3 +117,29 @@ header {
     @media (max-width: 400px) {
       .header_title h1 {
         font-size: 50px; } }
+
+section#services .bullet {
+  margin-top: 50px; }
+  section#services .bullet .bullet_title {
+    font-family: Raleway-Black;
+    font-size: 23px;
+    color: #2d2d2d;
+    text-transform: uppercase; }
+    section#services .bullet .bullet_title i {
+      margin-right: 10px; }
+
+section#case_study {
+  text-align: left; }
+  section#case_study .title_logo_type {
+    position: static;
+    color: #2d2d2d;
+    font-size: 25px;
+    margin-top: 50px; }
+    section#case_study .title_logo_type span {
+      color: inherit; }
+  section#case_study .btn_own {
+    color: #2d2d2d !important;
+    margin: 0;
+    margin-top: 20px;
+    padding: 10px 30px;
+    max-width: 200px; }

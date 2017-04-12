@@ -96,9 +96,36 @@ section {
     color: #ff5400;
     font-family: Raleway-ExtraBold; }
 
+.cl-effect-4 a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ff5400;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px); }
+
+.cl-effect-4 a:hover::after,
+.cl-effect-4 a:focus::after {
+  height: 5px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px); }
+
 nav {
   font-family: Roboto-Regular;
   z-index: 30 !important; }
+
+.cd-stretchy-nav.nav-is-visible ul span {
+  color: #ff5400; }
 
 header {
   height: 100vh;

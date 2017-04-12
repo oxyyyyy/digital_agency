@@ -22,30 +22,32 @@
     <div id="page-preloader"><span class="spinner"></span></div>
 
     <!-- Header logo -->
+    <div class="cl-effect-4">
     <a href="." id="header_logo"><span>your</span>logo</a>
+    </div>
 
     <!-- Nav in button -->
-    <nav class="cd-stretchy-nav">
+    <nav id="main_menu" class="cd-stretchy-nav">
         <a class="cd-nav-trigger" href="#0">
             <span aria-hidden="true"></span>
         </a>
-        <ul>
-            <li><a href="#0" class="active"><span>Home</span></a></li>
-            <li><a href="#0"><span>Services</span></a></li>
-            <li><a href="#0"><span>Works</span></a></li>
-            <li><a href="#0"><span>Team</span></a></li>
-            <li><a href="#0"><span>Contact</span></a></li>
+        <ul id="main_menu_ul">
+            <li><a href="#home" class="menu_link active"><span>Home</span></a></li>
+            <li><a href="#services" class="menu_link"><span>Services</span></a></li>
+            <li><a href="#case_study" class="menu_link"><span>Works</span></a></li>
+            <li><a href="#team" class="menu_link"><span>Team</span></a></li>
+            <li><a href="#contact" class="menu_link"><span>Contact</span></a></li>
             <!-- other list items here -->
         </ul>
         <span aria-hidden="true" class="stretchy-nav-bg"></span>
     </nav>
 
     <!-- Header -->
-    <header>
+    <header id="home">
         <div class="container">
             <div class="header_title">
                 <h1 class="wow fadeIn" data-wow-delay="0.3s">we are a<br>digital agency</h1>
-                <a href="#" class="btn btn_own button button--aylen wow fadeIn" data-wow-delay="0.7s">see our portfolio</a>
+                <a href="#services" class="btn btn_own button button--aylen wow fadeIn menu_link" data-wow-delay="0.7s">take a look</a>
             </div>
         </div>
     </header>
@@ -103,6 +105,9 @@
             </div>
         </div>
     </section>
+
+    <div id="team"></div>
+    <div id="contact"></div>
 
     <!-- Concatinated and minified scripts -->
     <script src="js/libs.min.js"></script>

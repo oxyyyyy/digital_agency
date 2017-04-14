@@ -152,3 +152,43 @@ section#case_study
     margin-top: 20px
     padding: 10px 30px
     max-width: 200px
+
+// Section "circles"
+section#circles
+  text-align: left
+  h2
+    font-family: Raleway-Black
+    font-size: 40px
+    color: $font_dark_color
+    text-transform: uppercase
+  ol
+    font-size: 20px
+    padding-left: 20px
+  .circle_desc_cont
+    height: 200px
+  .circle
+    width: 200px
+    height: 200px
+    border: 5px solid $accent_color
+    border-radius: 50%
+    margin: 0 auto 100px auto
+    text-align: center
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+  .off_line
+    &::after
+      content: ''
+      position: absolute
+      top: 200px
+      bottom: 100px
+      width: 5px
+      background-color: $accent_color
+      transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+  .on_line
+    &::after
+      content: ''
+      position: absolute
+      top: 200px
+      bottom: 0
+      width: 5px
+      background-color: $accent_color
+      transition: 1s cubic-bezier(0.4, 0, 0.2, 1)

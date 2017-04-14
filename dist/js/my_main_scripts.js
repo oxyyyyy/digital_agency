@@ -1,3 +1,8 @@
+// Copyright (c) 2017 Copyright Holder All Rights Reserved.
+// Author: Alexandr Vlasenko
+
+// TODO: Сделать появление кругов при скроле (скриптом? wow.js?)
+
 // WOW.js initialization
 $(window).on('load', function() {
     new WOW().init();
@@ -50,3 +55,25 @@ function onScroll(event) {
         }
     });
 }
+
+// Circle animation
+var waypoint_1_circle = $('#1_circle').waypoint(function(direction) {
+    $('#1_circle').removeClass('off_line').addClass('on_line')
+}, {
+    offset: '25%'
+});
+var waypoint_2_circle = $('#2_circle').waypoint(function(direction) {
+    $('#2_circle').removeClass('off_line').addClass('on_line')
+}, {
+    offset: '25%'
+});
+var waypoint_3_circle = $('#3_circle').waypoint(function(direction) {
+    $('#3_circle').removeClass('off_line').addClass('on_line')
+}, {
+    offset: '25%'
+});
+var waypoint_4_circle = $('#4_circle').waypoint(function(direction) {
+    $('#4_circle').removeClass('off_line').addClass('on_line')
+}, {
+    offset: '25%'
+});

@@ -32,6 +32,7 @@
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.2.1",
     "tether": "^1.4.0",
+    "waypoints": "^4.0.1",
     "wow.js": "^1.2.2"
   }
 }

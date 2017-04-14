@@ -1,3 +1,6 @@
+// Copyright (c) 2017 Copyright Holder All Rights Reserved.
+// Author: Alexandr Valsenko
+
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync').create(),
@@ -34,6 +37,7 @@ gulp.task('scripts', function() {
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/wow.js/dist/wow.min.js',
             'src/js/navbar.js',
+            'node_modules/waypoints/lib/jquery.waypoints.min.js',
             '!src/libs/modernizr-custom.js'
         ])
         .pipe(concat('libs.min.js'))

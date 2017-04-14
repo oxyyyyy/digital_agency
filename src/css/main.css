@@ -170,3 +170,40 @@ section#case_study {
     margin-top: 20px;
     padding: 10px 30px;
     max-width: 200px; }
+
+section#circles {
+  text-align: left; }
+  section#circles h2 {
+    font-family: Raleway-Black;
+    font-size: 40px;
+    color: #2d2d2d;
+    text-transform: uppercase; }
+  section#circles ol {
+    font-size: 20px;
+    padding-left: 20px; }
+  section#circles .circle_desc_cont {
+    height: 200px; }
+  section#circles .circle {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #ff5400;
+    border-radius: 50%;
+    margin: 0 auto 100px auto;
+    text-align: center;
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
+  section#circles .off_line::after {
+    content: '';
+    position: absolute;
+    top: 200px;
+    bottom: 100px;
+    width: 5px;
+    background-color: #ff5400;
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
+  section#circles .on_line::after {
+    content: '';
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    width: 5px;
+    background-color: #ff5400;
+    transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }

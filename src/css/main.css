@@ -144,6 +144,8 @@ header {
     @media (max-width: 400px) {
       .header_title h1 {
         font-size: 50px; } }
+    .header_title h1 span {
+      font-size: 40px; }
 
 section#services .bullet {
   margin-top: 50px; }
@@ -175,35 +177,37 @@ section#circles {
   text-align: left; }
   section#circles h2 {
     font-family: Raleway-Black;
-    font-size: 40px;
+    font-size: 30px;
     color: #2d2d2d;
     text-transform: uppercase; }
   section#circles ol {
-    font-size: 20px;
+    font-size: 17px;
     padding-left: 20px; }
-  section#circles .circle_desc_cont {
-    height: 200px; }
   section#circles .circle {
-    width: 200px;
     height: 200px;
-    border: 5px solid #ff5400;
-    border-radius: 50%;
     margin: 0 auto 100px auto;
     text-align: center;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
+    section#circles .circle i {
+      position: absolute; }
   section#circles .off_line::after {
     content: '';
     position: absolute;
-    top: 200px;
-    bottom: 100px;
-    width: 5px;
+    left: 240px;
+    right: 100px;
+    height: 5px;
     background-color: #ff5400;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
   section#circles .on_line::after {
     content: '';
     position: absolute;
-    top: 200px;
-    bottom: 0;
-    width: 5px;
+    left: 240px;
+    right: -43px;
+    height: 5px;
     background-color: #ff5400;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
+  section#circles #circle_4::after {
+    content: none; }
+  section#circles #circle_1_top, section#circles #circle_2_top, section#circles #circle_3_top, section#circles #circle_4_top {
+    height: 200px;
+    position: absolute; }

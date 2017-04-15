@@ -38,6 +38,7 @@ gulp.task('scripts', function() {
             'node_modules/wow.js/dist/wow.min.js',
             'src/js/navbar.js',
             'node_modules/waypoints/lib/jquery.waypoints.min.js',
+            'node_modules/jquery-circle-progress/dist/circle-progress.min.js',
             '!src/libs/modernizr-custom.js'
         ])
         .pipe(concat('libs.min.js'))

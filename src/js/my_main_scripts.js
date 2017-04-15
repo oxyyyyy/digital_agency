@@ -57,23 +57,85 @@ function onScroll(event) {
 }
 
 // Circle animation
-var waypoint_1_circle = $('#1_circle').waypoint(function(direction) {
-    $('#1_circle').removeClass('off_line').addClass('on_line')
-}, {
-    offset: '25%'
+$('.circle').circleProgress({
+    value: 1,
+    size: 200,
+    startAngle: 0,
+    thickness: 5,
+    fill: "#E5E5E5"
 });
-var waypoint_2_circle = $('#2_circle').waypoint(function(direction) {
-    $('#2_circle').removeClass('off_line').addClass('on_line')
+
+var waypoint_1_circle = $('.circle').waypoint(function(direction) {
+
+    $('#circle_1').circleProgress({
+        value: 1,
+        size: 200,
+        startAngle: 0,
+        thickness: 5,
+        fill: "#ff5400"
+    });
+    setTimeout(function() {
+        $('#circle_1').removeClass('off_line').addClass('on_line')
+    }, 1000);
+
+    setTimeout(function() {
+        $('#circle_2').circleProgress({
+            value: 0.5,
+            size: 200,
+            startAngle: -Math.PI,
+            thickness: 5,
+            fill: "#ff5400"
+        });
+        $('#circle_2_top').circleProgress({
+            value: 0.5,
+            size: 200,
+            startAngle: -Math.PI,
+            reverse: true,
+            emptyFill: "rgba(0, 0, 0, 0)",
+            thickness: 5,
+            fill: "#ff5400"
+        });
+    }, 2000);
+    setTimeout(function() {
+        $('#circle_2').removeClass('off_line').addClass('on_line')
+    }, 3000);
+
+    setTimeout(function() {
+        $('#circle_3').circleProgress({
+            value: 0.5,
+            size: 200,
+            startAngle: -Math.PI,
+            thickness: 5,
+            fill: "#ff5400"
+        });
+        $('#circle_3_top').circleProgress({
+            value: 0.5,
+            size: 200,
+            startAngle: -Math.PI,
+            reverse: true,
+            emptyFill: "rgba(0, 0, 0, 0)",
+            thickness: 5,
+            fill: "#ff5400"
+        });
+    }, 4000);
+    setTimeout(function() {
+        $('#circle_3').removeClass('off_line').addClass('on_line')
+    }, 5000);
+
+    setTimeout(function() {
+        $('#circle_4').circleProgress({
+            value: 1,
+            size: 200,
+            startAngle: 1.01*-Math.PI,
+            thickness: 5,
+            fill: "#ff5400"
+        });
+    }, 6000);
+    setTimeout(function() {
+        $('#circle_4').removeClass('off_line').addClass('on_line')
+    }, 7000);
+
+    this.destroy();
 }, {
-    offset: '25%'
-});
-var waypoint_3_circle = $('#3_circle').waypoint(function(direction) {
-    $('#3_circle').removeClass('off_line').addClass('on_line')
-}, {
-    offset: '25%'
-});
-var waypoint_4_circle = $('#4_circle').waypoint(function(direction) {
-    $('#4_circle').removeClass('off_line').addClass('on_line')
-}, {
-    offset: '25%'
+    offset: '50%'
 });

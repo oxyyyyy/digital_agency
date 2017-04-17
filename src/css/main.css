@@ -43,9 +43,11 @@ section {
 
 .section_main_title {
   font-family: Raleway-Black;
-  font-size: 33px;
+  font-size: 40px;
   color: #2d2d2d;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center; }
 
 #page-preloader {
   position: fixed;
@@ -164,50 +166,45 @@ header {
         .header_title h1 span {
           font-size: 20px; } }
 
-section#services .bullet {
-  margin-top: 50px; }
-  section#services .bullet .bullet_title {
-    font-family: Raleway-Black;
-    font-size: 23px;
-    color: #2d2d2d;
-    text-transform: uppercase; }
-    section#services .bullet .bullet_title i {
-      margin-right: 10px; }
-
-section#case_study {
+section#why_us {
   text-align: left; }
-  section#case_study .title_logo_type {
-    position: static;
-    color: #2d2d2d;
-    font-size: 25px;
-    margin-top: 50px; }
-    section#case_study .title_logo_type span {
-      color: inherit; }
-  section#case_study .btn_own {
+  section#why_us h3 {
+    font-size: 35px;
+    text-align: center; }
+  section#why_us ul li {
+    margin: 20px 0; }
+    section#why_us ul li i {
+      position: absolute;
+      left: 30px;
+      color: #217E00; }
+  section#why_us .btn_own {
     color: #2d2d2d !important;
-    margin: 0;
-    margin-top: 20px;
+    margin: auto;
+    margin-top: 50px;
     padding: 10px 30px;
     max-width: 200px; }
 
-section#circles {
+section#services {
   text-align: left; }
-  section#circles h2 {
+  section#services h3 {
     font-family: Raleway-Black;
     font-size: 30px;
-    color: #2d2d2d;
-    text-transform: uppercase; }
-  section#circles ol {
+    margin-bottom: 25px;
+    color: #2d2d2d; }
+  section#services ul {
     font-size: 17px;
-    padding-left: 20px; }
-  section#circles .circle {
+    padding-left: 0;
+    list-style-type: disc; }
+    section#services ul li {
+      margin-bottom: 5px; }
+  section#services .circle {
     height: 200px;
     margin: 0 auto 100px auto;
     text-align: center;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
-    section#circles .circle i {
+    section#services .circle i {
       position: absolute; }
-  section#circles .off_line::after {
+  section#services .off_line::after {
     content: '';
     position: absolute;
     left: 240px;
@@ -216,9 +213,9 @@ section#circles {
     background-color: #ff5400;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
     @media (max-width: 1200px) {
-      section#circles .off_line::after {
+      section#services .off_line::after {
         content: none; } }
-  section#circles .on_line::after {
+  section#services .on_line::after {
     content: '';
     position: absolute;
     left: 240px;
@@ -227,41 +224,40 @@ section#circles {
     background-color: #ff5400;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
     @media (max-width: 1200px) {
-      section#circles .on_line::after {
+      section#services .on_line::after {
         content: none; } }
-  section#circles #circle_4::after {
+  section#services #circle_4::after {
     content: none; }
-  section#circles #circle_1_top, section#circles #circle_2_top, section#circles #circle_3_top, section#circles #circle_4_top {
+  section#services #circle_1_top, section#services #circle_2_top, section#services #circle_3_top, section#services #circle_4_top {
     height: 200px;
     position: absolute; }
 
-section#unknown {
-  background-color: #f3f3f3; }
-  section#unknown .progress_block {
-    text-align: left; }
-    section#unknown .progress_block label {
-      display: inline-block; }
-    section#unknown .progress_block .desc_label {
-      font-family: Raleway-ExtraBold;
-      text-transform: uppercase;
-      max-width: 80%; }
-    section#unknown .progress_block .percent {
-      float: right; }
-    @media (max-width: 401px) {
-      section#unknown .progress_block #percent_3 {
-        margin-top: 21px; } }
-    section#unknown .progress_block .progress-bar {
-      background-color: #ff5400;
-      transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
-    section#unknown .progress_block .progress {
-      margin-bottom: 50px; }
-    section#unknown .progress_block #last_progress {
-      margin-bottom: 0; }
-  section#unknown .roi_sum {
-    min-height: 150px;
-    font-family: Raleway-Black;
-    font-size: 25px;
-    color: #ff5400; }
-    section#unknown .roi_sum #roi_pref {
-      color: #2d2d2d;
-      margin-right: 5px; }
+section#results .progress_block {
+  text-align: left; }
+  section#results .progress_block label {
+    display: inline-block; }
+  section#results .progress_block .desc_label {
+    font-family: Raleway-ExtraBold;
+    text-transform: uppercase;
+    max-width: 80%; }
+  section#results .progress_block .percent {
+    float: right; }
+  @media (max-width: 401px) {
+    section#results .progress_block #percent_3 {
+      margin-top: 21px; } }
+  section#results .progress_block .progress-bar {
+    background-color: #ff5400;
+    transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
+  section#results .progress_block .progress {
+    margin-bottom: 50px; }
+  section#results .progress_block #last_progress {
+    margin-bottom: 0; }
+
+section#results .roi_sum {
+  min-height: 150px;
+  font-family: Raleway-Black;
+  font-size: 25px;
+  color: #ff5400; }
+  section#results .roi_sum #roi_pref {
+    color: #2d2d2d;
+    margin-right: 5px; }

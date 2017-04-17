@@ -3,7 +3,11 @@
 
 @import "_vars.sass"
 
-// Common styles
+
+
+
+// ------------------------------------ Common styles ------------------------------------
+
 body
   font-family: Raleway-Regular
 ul
@@ -21,11 +25,11 @@ section
   background-color: $bg_darker_color
 .section_main_title
   font-family: Raleway-Black
-  font-size: 33px
+  font-size: 40px
   color: $font_dark_color
   text-transform: uppercase
-
-
+  margin-bottom: 50px
+  text-align: center
 // Preloader
 #page-preloader
     position: fixed
@@ -44,7 +48,6 @@ section
     top: 50%
     background: url('../img/ripple.gif') no-repeat 50% 50%
     margin: -64px 0 0 -64px
-
 // Buttons
 .btn_own
   font-family: Roboto-Regular
@@ -63,6 +66,11 @@ section
   &:hover, &:visited, &:focus
     color: $font_white_color
     background-color: $accent_color
+
+
+
+
+// ------------------------------------ Landing styles ------------------------------------
 
 // Header logo
 #header_logo, .title_logo_type
@@ -140,51 +148,54 @@ header
       @media (max-width: 450px)
         font-size: 20px
 
-// Section "services"
-section#services
-  .bullet
-    margin-top: 50px
-    .bullet_title
-      font-family: Raleway-Black
-      font-size: 23px
-      color: $font_dark_color
-      text-transform: uppercase
-      i
-        margin-right: 10px
+// Section "services" OLD!!!
+// section#services
+//   .bullet
+//     margin-top: 50px
+//     .bullet_title
+//       font-family: Raleway-Black
+//       font-size: 23px
+//       color: $font_dark_color
+//       text-transform: uppercase
+//       i
+//         margin-right: 10px
 
-// Section "case_study"
-section#case_study
+// Section "why_us"
+section#why_us
   text-align: left
-  .title_logo_type
-    position: static
-    color: $font_dark_color
-    font-size: 25px
-    margin-top: 50px
-    span
-      color: inherit
+  h3
+    font-size: 35px
+    text-align: center
+  ul
+    li
+      margin: 20px 0
+      i
+        position: absolute
+        left: 30px
+        color: #217E00
   .btn_own
     color: $font_dark_color !important
-    margin: 0
-    margin-top: 20px
+    margin: auto
+    margin-top: 50px
     padding: 10px 30px
     max-width: 200px
 
-// Section "circles"
-section#circles
+// Section "services"
+section#services
   text-align: left
-  h2
+  h3
     font-family: Raleway-Black
     font-size: 30px
+    margin-bottom: 25px
     color: $font_dark_color
-    text-transform: uppercase
-  ol
+  ul
     font-size: 17px
-    padding-left: 20px
+    padding-left: 0
+    list-style-type: disc
+    li
+      margin-bottom: 5px
   .circle
-    // width: 200px
     height: 200px
-    // border: 5px solid $accent_color
-    // border-radius: 50%
     margin: 0 auto 100px auto
     text-align: center
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
@@ -219,9 +230,8 @@ section#circles
     height: 200px
     position: absolute
 
-// Section "unknown"
-section#unknown
-  background-color: $bg_darker_color
+// Section "results"
+section#results
   .progress_block
     text-align: left
     label

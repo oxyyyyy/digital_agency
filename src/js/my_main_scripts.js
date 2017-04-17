@@ -65,7 +65,7 @@ $('.circle').circleProgress({
   fill: "#E5E5E5"
 });
 
-var circles = $('#circles').waypoint(function(direction) {
+var services = $('#services').waypoint(function(direction) {
 
   $('#circle_1').circleProgress({
     value: 1,
@@ -154,7 +154,7 @@ var percent_2_animation = new CountUp("percent_2", 0, 79, 0, 3, options);
 var percent_3_animation = new CountUp("percent_3", 0, 28, 0, 3, options);
 var roi_animation = new CountUp("roi_value", 0, 300, 0, 3, options);
 
-var progress = $('#unknown').waypoint(function(direction) {
+var progress = $('#results').waypoint(function(direction) {
   $('.progress-bar').css("width",
     function() {
       return $(this).attr("aria-valuenow") + "%";

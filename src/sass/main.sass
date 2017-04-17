@@ -114,6 +114,14 @@ header
   background-size: cover
   color: $font_white_color
   padding-top: 35vh
+  text-align: center
+  i
+    position: absolute
+    bottom: 50px
+    transition: 1s
+    color: #fff
+    &:hover
+      color: $accent_color
 .header_title
   text-align: center
   h1
@@ -121,10 +129,16 @@ header
     font-size: 75px
     text-transform: uppercase
     margin-bottom: 30px
-    @media (max-width: 400px)
+    @media (max-width: 767px)
       font-size: 50px
+    @media (max-width: 450px)
+      font-size: 35px
     span
       font-size: 40px
+      @media (max-width: 767px)
+        font-size: 30px
+      @media (max-width: 450px)
+        font-size: 20px
 
 // Section "services"
 section#services
@@ -185,6 +199,8 @@ section#circles
       height: 5px
       background-color: $accent_color
       transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+      @media (max-width: 1200px)
+        content: none
   .on_line
     &::after
       content: ''
@@ -194,9 +210,43 @@ section#circles
       height: 5px
       background-color: $accent_color
       transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+      @media (max-width: 1200px)
+        content: none
   #circle_4
     &::after
       content: none
   #circle_1_top, #circle_2_top, #circle_3_top, #circle_4_top
     height: 200px
     position: absolute
+
+// Section "unknown"
+section#unknown
+  background-color: $bg_darker_color
+  .progress_block
+    text-align: left
+    label
+      display: inline-block
+    .desc_label
+      font-family: Raleway-ExtraBold
+      text-transform: uppercase
+      max-width: 80%
+    .percent
+      float: right
+    #percent_3
+      @media (max-width: 401px)
+        margin-top: 21px
+    .progress-bar
+      background-color: $accent_color
+      transition: $transitionProgressProperty
+    .progress
+    	margin-bottom: 50px
+    #last_progress
+      margin-bottom: 0
+  .roi_sum
+    min-height: 150px
+    font-family: Raleway-Black
+    font-size: 25px
+    color: $accent_color
+    #roi_pref
+      color: $font_dark_color
+      margin-right: 5px

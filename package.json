@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
+    "countup.js": "^1.8.3",
     "jquery": "^3.2.1",
     "jquery-circle-progress": "^1.2.1",
     "tether": "^1.4.0",

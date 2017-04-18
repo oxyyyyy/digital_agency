@@ -207,6 +207,9 @@ section#services {
     list-style-type: disc; }
     section#services ul li {
       margin-bottom: 5px; }
+    @media (max-width: 575px) {
+      section#services ul {
+        list-style-type: none; } }
   section#services .circle {
     height: 200px;
     margin: 0 auto 100px auto;
@@ -271,6 +274,42 @@ section#results .roi_sum {
   section#results .roi_sum #roi_pref {
     color: #2d2d2d;
     margin-right: 5px; }
+
+section#contact {
+  background-image: url("../img/contact_bg.png");
+  background-size: cover; }
+  section#contact .section_main_title {
+    color: #fff; }
+  section#contact form {
+    margin: auto;
+    max-width: 670px; }
+    section#contact form .styled_input {
+      font-family: Raleway-Regular;
+      font-size: 14px;
+      padding: 17.5px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 0;
+      cursor: pointer;
+      outline: none;
+      color: #cacaca;
+      background-color: rgba(243, 243, 243, 0.3); }
+      section#contact form .styled_input:link, section#contact form .styled_input:hover, section#contact form .styled_input:focus, section#contact form .styled_input:visited, section#contact form .styled_input:active {
+        outline: none; }
+      section#contact form .styled_input::placeholder {
+        color: #cacaca; }
+    section#contact form textarea {
+      height: 130px;
+      resize: none;
+      margin-bottom: 50px !important; }
+    section#contact form #submit_btn {
+      cursor: pointer;
+      transition: 0.5s; }
+      section#contact form #submit_btn:hover {
+        background-color: #ff5400 !important; }
+      section#contact form #submit_btn:link, section#contact form #submit_btn:hover, section#contact form #submit_btn:focus, section#contact form #submit_btn:visited, section#contact form #submit_btn:active {
+        outline: none;
+        border: 5px solid #ff5400; }
 
 footer {
   background-color: #1d1d1d;

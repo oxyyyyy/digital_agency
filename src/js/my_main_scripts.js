@@ -168,3 +168,36 @@ var progress = $('#results').waypoint(function(direction) {
 }, {
   offset: '75%'
 });
+
+// Ajax from (formspree.io)
+$("#contact_form").submit(function(event) {
+
+  event.preventDefault();
+
+  $.ajax({
+      url: "https://formspree.io/elektronikaion@gmail.com",
+      method: "POST",
+      data: {
+        Имя: $("#name").val(),
+        Почта: $("#email").val(),
+        Сообщение: $("#message").val()
+      },
+      beforeSend: function() {
+        $("#submit_btn").html('Отправка <i class="fa fa-circle-o-notch fa-spin fa-fw"></i>');
+      },
+      dataType: "json"
+    })
+
+    .done(function(response) {
+      $("#submit_btn").html('Отправлено! <i class="fa fa-check" aria-hidden="true"></i>');
+      // Clear the form.
+      $('#name').val('');
+      $('#email').val('');
+      $('#message').val('');
+    })
+
+    .fail(function(data) {
+      $("#submit_btn").html('Ошибка. <i class="fa fa-times" aria-hidden="true"></i>');
+    });
+
+});

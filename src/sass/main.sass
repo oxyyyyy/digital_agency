@@ -201,6 +201,8 @@ section#services
     list-style-type: disc
     li
       margin-bottom: 5px
+    @media (max-width: 575px)
+      list-style-type: none
   .circle
     height: 200px
     margin: 0 auto 100px auto
@@ -268,6 +270,44 @@ section#results
       color: $font_dark_color
       margin-right: 5px
 
+// Section "contact"
+section#contact
+  background-image: url("../img/contact_bg.png")
+  background-size: cover
+  .section_main_title
+    color: $font_white_color
+  form
+    margin: auto
+    max-width: 670px
+    .styled_input
+      font-family: Raleway-Regular
+      font-size: 14px
+      padding: 17.5px
+      margin-bottom: 15px
+      border: none
+      border-radius: 0
+      cursor: pointer
+      outline: none
+      color: $font_input_color
+      background-color: $input_bg_color
+      &:link, &:hover, &:focus, &:visited, &:active
+        outline: none
+      &::placeholder
+        color: $font_input_color
+    textarea
+      height: 130px
+      resize: none
+      margin-bottom: 50px !important
+    #submit_btn
+      cursor: pointer
+      transition: $transitionProperty
+      &:hover
+        background-color: $accent_color !important
+      &:link, &:hover, &:focus, &:visited, &:active
+        outline: none
+        border: 5px solid $accent_color
+
+// Footer
 footer
   background-color: $accent_dark_color
   padding: 55px 0

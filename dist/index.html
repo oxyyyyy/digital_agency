@@ -32,11 +32,21 @@
       <span aria-hidden="true"></span>
     </a>
     <ul id="main_menu_ul">
-      <li><a href="#home" class="menu_link active"></a></li>
-      <li><a href="#why_us" class="menu_link"></a></li>
-      <li><a href="#services" class="menu_link"></a></li>
-      <li><a href="#results" class="menu_link"></a></li>
-      <li><a href="#contact" class="menu_link"></a></li>
+      <li>
+        <a href="#home" class="menu_link active"></a>
+      </li>
+      <li>
+        <a href="#why_us" class="menu_link"></a>
+      </li>
+      <li>
+        <a href="#services" class="menu_link"></a>
+      </li>
+      <li>
+        <a href="#results" class="menu_link"></a>
+      </li>
+      <li>
+        <a href="#contact" class="menu_link"></a>
+      </li>
       <!-- other list items here -->
     </ul>
     <span aria-hidden="true" class="stretchy-nav-bg"></span>
@@ -62,7 +72,9 @@
           <ul>
             <li><i class="fa fa-check" aria-hidden="true"></i>Разработка комплексной стратегии продвижения с учетом индивидуальных факторов влияния на рынке вашего продукта.</li>
             <li><i class="fa fa-check" aria-hidden="true"></i>Использование всего комплекса инструментов и каналов получения целевого трафика, которые являются оптимальными именно для вашего бизнеса.</li>
-            <li><i class="fa fa-check" aria-hidden="true"></i>Постоянная работа над улучшением сайта и рекламных компаний. Улучшение поведенческих факторов, рост доверия целевой аудитории	, увеличение реальных продаж, оценка результатов с ориентацией на реальные KPI.</li>
+            <li><i class="fa fa-check" aria-hidden="true"></i>Постоянная работа над улучшением сайта и рекламных компаний. Улучшение поведенческих факторов, рост доверия целевой аудитории , увеличение реальных продаж, оценка результатов с ориентацией на реальные
+              KPI.
+            </li>
           </ul>
           <a href="#" class="btn btn_own button button--aylen">подробнее</a>
         </div>
@@ -172,6 +184,7 @@
     </div>
   </section> -->
 
+  <!-- Section "results" -->
   <section id="results">
     <div class="container">
       <h2 class="section_main_title">Результаты комплексного подхода</h2>
@@ -203,7 +216,34 @@
   </section>
 
   <div id="team"></div>
-  <div id="contact"></div>
+
+  <!-- Section "contact" -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section_main_title">свяжитесь с нами</h2>
+      <form id="contact_form">
+        <input type="text" id="name" class="form-control styled_input" name="name" placeholder="Ваше имя" required>
+        <input type="email" id="email" class="form-control styled_input" name="email" placeholder="Ваш e-mail" required>
+        <textarea name="message" id="message" class="form-control styled_input" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit" id="submit_btn" class="form-control btn btn_own button button--aylen">Отправить</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <a href="#">
+        <p class="title_logo_type"><span>your</span>logo</p>
+      </a>
+      <div class="social d-flex justify-content-between align-items-center">
+        <a href="#"><img src="img/social/004-facebook.png" class="social_icon" alt=""></a>
+        <a href="#"><img src="img/social/003-twitter.png" class="social_icon" alt=""></a>
+        <a href="#"><img src="img/social/002-vk.png" class="social_icon" alt=""></a>
+        <a href="#"><img src="img/social/001-instagram.png" class="social_icon" alt=""></a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Concatinated and minified scripts -->
   <script src="js/libs.min.js"></script>

@@ -15,7 +15,7 @@ ul
 a
   text-decoration: none !important
 // Section styles
-section
+section, footer
   text-align: center
   padding: 130px 0
   font-family: Raleway-Regular
@@ -30,6 +30,10 @@ section
   text-transform: uppercase
   margin-bottom: 50px
   text-align: center
+  @media (max-width: 767px)
+    font-size: 2.5em
+  @media (max-width: 450px)
+    font-size: 2em
 // Preloader
 #page-preloader
     position: fixed
@@ -84,6 +88,7 @@ section
   span
     color: $accent_color
     font-family: Raleway-ExtraBold
+    transition: $transitionProperty
 // Logo hover effect
 .cl-effect-4 a::after
 	position: absolute
@@ -126,7 +131,7 @@ header
   i
     position: absolute
     bottom: 50px
-    transition: 1s
+    transition: $transitionProperty
     color: #fff
     &:hover
       color: $accent_color
@@ -138,9 +143,9 @@ header
     text-transform: uppercase
     margin-bottom: 30px
     @media (max-width: 767px)
-      font-size: 50px
+      font-size: 3.5em
     @media (max-width: 450px)
-      font-size: 35px
+      font-size: 2em
     span
       font-size: 40px
       @media (max-width: 767px)
@@ -166,6 +171,8 @@ section#why_us
   h3
     font-size: 35px
     text-align: center
+    @media (max-width: 450px)
+      font-size: 1.5em
   ul
     li
       margin: 20px 0
@@ -198,7 +205,7 @@ section#services
     height: 200px
     margin: 0 auto 100px auto
     text-align: center
-    transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+    transition: $transitionCircleProperty
     i
       position: absolute
   .off_line
@@ -209,7 +216,7 @@ section#services
       right: 100px
       height: 5px
       background-color: $accent_color
-      transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+      transition: $transitionCircleProperty
       @media (max-width: 1200px)
         content: none
   .on_line
@@ -220,7 +227,7 @@ section#services
       right: -43px
       height: 5px
       background-color: $accent_color
-      transition: 1s cubic-bezier(0.4, 0, 0.2, 1)
+      transition: $transitionCircleProperty
       @media (max-width: 1200px)
         content: none
   #circle_4
@@ -260,3 +267,26 @@ section#results
     #roi_pref
       color: $font_dark_color
       margin-right: 5px
+
+footer
+  background-color: $accent_dark_color
+  padding: 55px 0
+  .title_logo_type
+    color: $font_light_color
+    margin: 0
+    position: static
+    span
+      color: inherit
+    &:hover
+      span
+        color: $accent_color
+    @media (max-width: 401px)
+      margin-bottom: 30px
+  .social
+    .social_icon
+      width: 40px
+      height: 40px
+      margin: 0 5px
+  .container
+    @media (max-width: 401px)
+      justify-content: center !important

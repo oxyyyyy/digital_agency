@@ -31,7 +31,7 @@ ul {
 a {
   text-decoration: none !important; }
 
-section {
+section, footer {
   text-align: center;
   padding: 130px 0;
   font-family: Raleway-Regular;
@@ -48,6 +48,12 @@ section {
   text-transform: uppercase;
   margin-bottom: 50px;
   text-align: center; }
+  @media (max-width: 767px) {
+    .section_main_title {
+      font-size: 2.5em; } }
+  @media (max-width: 450px) {
+    .section_main_title {
+      font-size: 2em; } }
 
 #page-preloader {
   position: fixed;
@@ -96,7 +102,8 @@ section {
   left: 5%; }
   #header_logo span, .title_logo_type span {
     color: #ff5400;
-    font-family: Raleway-ExtraBold; }
+    font-family: Raleway-ExtraBold;
+    transition: 0.5s; }
 
 .cl-effect-4 a::after {
   position: absolute;
@@ -139,7 +146,7 @@ header {
   header i {
     position: absolute;
     bottom: 50px;
-    transition: 1s;
+    transition: 0.5s;
     color: #fff; }
     header i:hover {
       color: #ff5400; }
@@ -153,10 +160,10 @@ header {
     margin-bottom: 30px; }
     @media (max-width: 767px) {
       .header_title h1 {
-        font-size: 50px; } }
+        font-size: 3.5em; } }
     @media (max-width: 450px) {
       .header_title h1 {
-        font-size: 35px; } }
+        font-size: 2em; } }
     .header_title h1 span {
       font-size: 40px; }
       @media (max-width: 767px) {
@@ -171,6 +178,9 @@ section#why_us {
   section#why_us h3 {
     font-size: 35px;
     text-align: center; }
+    @media (max-width: 450px) {
+      section#why_us h3 {
+        font-size: 1.5em; } }
   section#why_us ul li {
     margin: 20px 0; }
     section#why_us ul li i {
@@ -261,3 +271,25 @@ section#results .roi_sum {
   section#results .roi_sum #roi_pref {
     color: #2d2d2d;
     margin-right: 5px; }
+
+footer {
+  background-color: #1d1d1d;
+  padding: 55px 0; }
+  footer .title_logo_type {
+    color: #515151;
+    margin: 0;
+    position: static; }
+    footer .title_logo_type span {
+      color: inherit; }
+    footer .title_logo_type:hover span {
+      color: #ff5400; }
+    @media (max-width: 401px) {
+      footer .title_logo_type {
+        margin-bottom: 30px; } }
+  footer .social .social_icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px; }
+  @media (max-width: 401px) {
+    footer .container {
+      justify-content: center !important; } }

@@ -41,7 +41,7 @@ section, footer
     top: 0
     right: 0
     bottom: 0
-    background: #fff
+    background: $font_white_color
     z-index: 50
     overflow: hidden
 #page-preloader .spinner
@@ -132,7 +132,7 @@ header
     position: absolute
     bottom: 50px
     transition: $transitionProperty
-    color: #fff
+    color: $font_white_color
     &:hover
       color: $accent_color
 .header_title
@@ -179,7 +179,7 @@ section#why_us
       i
         position: absolute
         left: 30px
-        color: #217E00
+        color: $success_color
   .btn_own
     color: $font_dark_color !important
     margin: auto
@@ -198,18 +198,28 @@ section#services
   ul
     font-size: 17px
     padding-left: 0
-    list-style-type: disc
     li
       margin-bottom: 5px
-    @media (max-width: 575px)
-      list-style-type: none
+      position: relative
+      &::before
+        content: ''
+        height: 100%
+        width: 5px
+        position: absolute
+        left: -10px
+        background-color: $accent_color
   .circle
     height: 200px
-    margin: 0 auto 100px auto
+    margin: 0 auto 50px auto
     text-align: center
     transition: $transitionCircleProperty
-    i
+    img
       position: absolute
+      width: 100px
+  @media (max-width: 1199px)
+    .circle
+      margin-top: 50px
+      margin-bottom: 25px
   .off_line
     &::after
       content: ''
@@ -261,14 +271,46 @@ section#results
     	margin-bottom: 50px
     #last_progress
       margin-bottom: 0
+    @media (max-width: 767px)
+      margin-bottom: 50px
+  // Roi rise arrow
+  .roi_rise
+    width: 100px
+    height: 50px
+    margin-top: auto
+    padding-top: 50px
+    background-color: $accent_color
+    position: relative
+    transition: $transitionProgressProperty
+    &::before
+      content: ''
+      width: 50px
+      height: 50px
+      background-color: $font_white_color
+      position: absolute
+      top: 0px
+      left: -25px
+      transform: skew(-45deg)
+    &::after
+      content: ''
+      width: 50px
+      height: 50px
+      background-color: $font_white_color
+      position: absolute
+      top: 0px
+      left: 75px
+      transform: skew(45deg)
   .roi_sum
-    min-height: 150px
+    min-height: 190px
     font-family: Raleway-Black
     font-size: 25px
-    color: $accent_color
+    color: $font_white_color
     #roi_pref
       color: $font_dark_color
-      margin-right: 5px
+      text-transform: uppercase
+      position: absolute
+      bottom: -45px
+      left: 3px
 
 // Section "contact"
 section#contact

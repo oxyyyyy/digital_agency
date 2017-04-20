@@ -16,11 +16,11 @@ $(window).on('load', function() {
   $preloader.delay(350).fadeOut('slow');
 });
 
-// Smooth anchors + active menu item
+// Smooth scroll + active menu item
 $(document).ready(function() {
   $(document).on("scroll", onScroll);
 
-  //smoothscroll
+  // Active menu item on click + smooth scroll
   $('.menu_link').on('click', function(e) {
     e.preventDefault();
     $(document).off("scroll");
@@ -42,6 +42,7 @@ $(document).ready(function() {
   });
 });
 
+// Active menu item on scroll
 function onScroll(event) {
   var scrollPos = $(document).scrollTop();
   $('#main_menu_ul li a').each(function() {
@@ -72,7 +73,7 @@ var services = $('#services').waypoint(function(direction) {
     size: 200,
     startAngle: 0,
     thickness: 5,
-    fill: "#ff5400"
+    fill: "#01dbda"
   });
   setTimeout(function() {
     $('#circle_1').removeClass('off_line').addClass('on_line')
@@ -84,7 +85,7 @@ var services = $('#services').waypoint(function(direction) {
       size: 200,
       startAngle: -Math.PI,
       thickness: 5,
-      fill: "#ff5400"
+      fill: "#01dbda"
     });
     $('#circle_2_top').circleProgress({
       value: 0.5,
@@ -93,7 +94,7 @@ var services = $('#services').waypoint(function(direction) {
       reverse: true,
       emptyFill: "rgba(0, 0, 0, 0)",
       thickness: 5,
-      fill: "#ff5400"
+      fill: "#01dbda"
     });
   }, 2000);
   setTimeout(function() {
@@ -106,7 +107,7 @@ var services = $('#services').waypoint(function(direction) {
       size: 200,
       startAngle: -Math.PI,
       thickness: 5,
-      fill: "#ff5400"
+      fill: "#01dbda"
     });
     $('#circle_3_top').circleProgress({
       value: 0.5,
@@ -115,7 +116,7 @@ var services = $('#services').waypoint(function(direction) {
       reverse: true,
       emptyFill: "rgba(0, 0, 0, 0)",
       thickness: 5,
-      fill: "#ff5400"
+      fill: "#01dbda"
     });
   }, 4000);
   setTimeout(function() {
@@ -128,7 +129,7 @@ var services = $('#services').waypoint(function(direction) {
       size: 200,
       startAngle: 1.01 * -Math.PI,
       thickness: 5,
-      fill: "#ff5400"
+      fill: "#01dbda"
     });
   }, 6000);
   setTimeout(function() {
@@ -164,6 +165,7 @@ var progress = $('#results').waypoint(function(direction) {
   percent_2_animation.start();
   percent_3_animation.start();
   roi_animation.start();
+  $('.roi_rise').css("height","180px");
   this.destroy();
 }, {
   offset: '75%'

@@ -55,6 +55,23 @@ section, footer {
     .section_main_title {
       font-size: 2em; } }
 
+.section_main_title_bold {
+  font-size: 30px;
+  color: #2d2d2d;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: left; }
+  @media (max-width: 767px) {
+    .section_main_title_bold {
+      font-size: 2.5em; } }
+  @media (max-width: 450px) {
+    .section_main_title_bold {
+      font-size: 2em; } }
+  .section_main_title_bold span {
+    font-family: Raleway-Black;
+    font-size: 45px;
+    color: #0ABAB5; }
+
 #page-preloader {
   position: fixed;
   left: 0;
@@ -75,9 +92,9 @@ section, footer {
   margin: -64px 0 0 -64px; }
 
 .btn_own {
-  font-family: Roboto-Regular;
+  font-family: Roboto-Bold;
   font-size: 15px;
-  color: #fff !important;
+  color: #0ABAB5 !important;
   text-transform: uppercase;
   background-color: transparent !important;
   border: none;
@@ -86,11 +103,11 @@ section, footer {
   max-width: 275px;
   margin: auto;
   float: none;
-  border: 5px solid #01dbda;
+  border: 5px solid #0ABAB5;
   z-index: 0; }
-  .btn_own:hover, .btn_own:visited, .btn_own:focus {
-    color: #fff;
-    background-color: #01dbda; }
+  .btn_own:hover {
+    color: #fff !important;
+    background-color: #0ABAB5; }
 
 #header_logo, .title_logo_type {
   font-family: Raleway-Regular;
@@ -101,7 +118,7 @@ section, footer {
   top: 50px;
   left: 5%; }
   #header_logo span, .title_logo_type span {
-    color: #01dbda;
+    color: #3ACBC7;
     font-family: Raleway-ExtraBold;
     transition: 0.5s; }
 
@@ -111,7 +128,7 @@ section, footer {
   left: 0;
   width: 100%;
   height: 1px;
-  background: #01dbda;
+  background: #3ACBC7;
   content: '';
   opacity: 0;
   -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
@@ -134,7 +151,7 @@ nav {
   z-index: 30 !important; }
 
 .cd-stretchy-nav.nav-is-visible ul span {
-  color: #01dbda; }
+  color: #3ACBC7 !important; }
 
 header {
   height: 100vh;
@@ -149,7 +166,7 @@ header {
     transition: 0.5s;
     color: #fff; }
     header i:hover {
-      color: #01dbda; }
+      color: #0ABAB5; }
 
 .header_title {
   text-align: center; }
@@ -174,7 +191,8 @@ header {
           font-size: 20px; } }
 
 section#why_us {
-  text-align: left; }
+  text-align: left;
+  overflow: hidden; }
   section#why_us h3 {
     font-size: 35px;
     text-align: center; }
@@ -187,8 +205,12 @@ section#why_us {
       position: absolute;
       left: 30px;
       color: #217E00; }
+  section#why_us img {
+    min-width: 150%; }
+    @media (min-width: 1920px) {
+      section#why_us img {
+        min-width: 100%; } }
   section#why_us .btn_own {
-    color: #2d2d2d !important;
     margin: auto;
     margin-top: 50px;
     padding: 10px 30px;
@@ -205,7 +227,7 @@ section#services {
     font-size: 17px;
     padding-left: 0; }
     section#services ul li {
-      margin-bottom: 5px;
+      margin-bottom: 15px;
       position: relative; }
       section#services ul li::before {
         content: '';
@@ -213,7 +235,7 @@ section#services {
         width: 5px;
         position: absolute;
         left: -10px;
-        background-color: #01dbda; }
+        background-color: #0ABAB5; }
   section#services .circle {
     height: 200px;
     margin: 0 auto 50px auto;
@@ -232,7 +254,7 @@ section#services {
     left: 240px;
     right: 100px;
     height: 5px;
-    background-color: #01dbda;
+    background-color: #0ABAB5;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
     @media (max-width: 1200px) {
       section#services .off_line::after {
@@ -243,7 +265,7 @@ section#services {
     left: 240px;
     right: -43px;
     height: 5px;
-    background-color: #01dbda;
+    background-color: #0ABAB5;
     transition: 1s cubic-bezier(0.4, 0, 0.2, 1); }
     @media (max-width: 1200px) {
       section#services .on_line::after {
@@ -268,7 +290,7 @@ section#results .progress_block {
     section#results .progress_block #percent_3 {
       margin-top: 21px; } }
   section#results .progress_block .progress-bar {
-    background-color: #01dbda;
+    background-color: #0ABAB5;
     transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
   section#results .progress_block .progress {
     margin-bottom: 50px; }
@@ -283,7 +305,7 @@ section#results .roi_rise {
   height: 50px;
   margin-top: auto;
   padding-top: 50px;
-  background-color: #01dbda;
+  background-color: #0ABAB5;
   position: relative;
   transition: 3s cubic-bezier(0.06, 0.68, 0.57, 1.07); }
   section#results .roi_rise::before {
@@ -348,10 +370,10 @@ section#contact {
       cursor: pointer;
       transition: 0.5s; }
       section#contact form #submit_btn:hover {
-        background-color: #01dbda !important; }
+        background-color: #0ABAB5 !important; }
       section#contact form #submit_btn:link, section#contact form #submit_btn:hover, section#contact form #submit_btn:focus, section#contact form #submit_btn:visited, section#contact form #submit_btn:active {
         outline: none;
-        border: 5px solid #01dbda; }
+        border: 5px solid #0ABAB5; }
 
 footer {
   background-color: #1d1d1d;
@@ -363,7 +385,7 @@ footer {
     footer .title_logo_type span {
       color: inherit; }
     footer .title_logo_type:hover span {
-      color: #01dbda; }
+      color: #3ACBC7; }
     @media (max-width: 401px) {
       footer .title_logo_type {
         margin-bottom: 30px; } }

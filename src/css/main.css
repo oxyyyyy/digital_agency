@@ -102,7 +102,7 @@ section, footer {
   font-size: 15px;
   color: #0ABAB5 !important;
   text-transform: uppercase;
-  background-color: transparent !important;
+  background-color: transparent;
   border: none;
   border-radius: 100px;
   padding: 15px 65px;
@@ -163,6 +163,7 @@ header {
   height: 100vh;
   background-image: url("../img/header_bg.png");
   background-size: cover;
+  background-attachment: fixed;
   color: #fff;
   padding-top: 35vh;
   text-align: center; }
@@ -220,6 +221,9 @@ section#why_us {
       section#why_us img {
         min-width: 100%;
         margin-top: 75px; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      section#why_us img {
+        min-width: 200%; } }
   section#why_us .btn_own {
     margin: auto;
     margin-top: 50px;
@@ -233,23 +237,21 @@ section#services {
     font-size: 30px;
     margin-bottom: 25px;
     color: #2d2d2d; }
-  section#services ul {
-    font-size: 17px;
-    padding-left: 0; }
-    @media (max-width: 1199px) {
-      section#services ul {
-        display: inline-block;
-        margin: auto; } }
-    section#services ul li {
-      margin-bottom: 15px;
-      position: relative; }
-      section#services ul li::before {
-        content: '';
-        height: 100%;
-        width: 5px;
-        position: absolute;
-        left: -10px;
-        background-color: #0ABAB5; }
+  section#services .circle_desc {
+    margin: auto; }
+    section#services .circle_desc ul {
+      font-size: 17px;
+      padding-left: 0; }
+      section#services .circle_desc ul li {
+        margin-bottom: 15px;
+        position: relative; }
+        section#services .circle_desc ul li::before {
+          content: '';
+          height: 100%;
+          width: 5px;
+          position: absolute;
+          left: -10px;
+          background-color: #0ABAB5; }
   section#services .circle {
     height: 200px;
     margin: 0 auto 50px auto;
@@ -355,7 +357,8 @@ section#results .roi_sum {
 
 section#contact {
   background-image: url("../img/contact_bg.png");
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   section#contact .section_main_title {
     color: #fff; }
   section#contact form {

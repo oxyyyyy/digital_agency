@@ -79,7 +79,7 @@ section, footer
   font-size: 15px
   color: $accent_color !important
   text-transform: uppercase
-  background-color: transparent !important
+  background-color: transparent
   border: none
   border-radius: 100px
   padding: 15px 65px
@@ -146,6 +146,7 @@ header
   height: 100vh
   background-image: url("../img/header_bg.png")
   background-size: cover
+  background-attachment: fixed
   color: $font_white_color
   padding-top: 35vh
   text-align: center
@@ -210,6 +211,8 @@ section#why_us
     @media (max-width: 767px)
       min-width: 100%
       margin-top: 75px
+    @media (min-width: 768px) and (max-width: 991px)
+      min-width: 200%
   .btn_own
     margin: auto
     margin-top: 50px
@@ -224,22 +227,21 @@ section#services
     font-size: 30px
     margin-bottom: 25px
     color: $font_dark_color
-  ul
-    font-size: 17px
-    padding-left: 0
-    @media (max-width: 1199px)
-      display: inline-block
-      margin: auto
-    li
-      margin-bottom: 15px
-      position: relative
-      &::before
-        content: ''
-        height: 100%
-        width: 5px
-        position: absolute
-        left: -10px
-        background-color: $accent_color
+  .circle_desc
+    margin: auto
+    ul
+      font-size: 17px
+      padding-left: 0
+      li
+        margin-bottom: 15px
+        position: relative
+        &::before
+          content: ''
+          height: 100%
+          width: 5px
+          position: absolute
+          left: -10px
+          background-color: $accent_color
   // Animated circle
   .circle
     height: 200px
@@ -350,6 +352,7 @@ section#results
 section#contact
   background-image: url("../img/contact_bg.png")
   background-size: cover
+  background-attachment: fixed
   .section_main_title
     color: $font_white_color
   form

@@ -58,83 +58,103 @@ function onScroll(event) {
 }
 
 // Circle animation
-$('.circle').circleProgress({
-  value: 1,
-  size: 200,
-  startAngle: 0,
-  thickness: 5,
-  fill: "#E5E5E5"
-});
-
-var services = $('#services').waypoint(function(direction) {
-
-  $('#circle_1').circleProgress({
+var nonAnimatedCirclesMobile = window.matchMedia("(max-width: 1199px)")
+// Fill with no animation on mobiles
+if (nonAnimatedCirclesMobile.matches) {
+  $('.circle').circleProgress({
     value: 1,
     size: 200,
     startAngle: 0,
     thickness: 5,
     fill: "#0ABAB5"
   });
-  setTimeout(function() {
-    $('#circle_1').removeClass('off_line').addClass('on_line')
-  }, 1000);
+}
+// Prepare for animation on desktops
+else {
+  $('.circle').circleProgress({
+    value: 1,
+    size: 200,
+    startAngle: 0,
+    thickness: 5,
+    fill: "#E5E5E5"
+  });
+}
 
-  setTimeout(function() {
-    $('#circle_2').circleProgress({
-      value: 0.5,
-      size: 200,
-      startAngle: -Math.PI,
-      thickness: 5,
-      fill: "#0ABAB5"
-    });
-    $('#circle_2_top').circleProgress({
-      value: 0.5,
-      size: 200,
-      startAngle: -Math.PI,
-      reverse: true,
-      emptyFill: "rgba(0, 0, 0, 0)",
-      thickness: 5,
-      fill: "#0ABAB5"
-    });
-  }, 2000);
-  setTimeout(function() {
-    $('#circle_2').removeClass('off_line').addClass('on_line')
-  }, 3000);
+// Run animation on waypoint
+var services = $('#services').waypoint(function(direction) {
 
-  setTimeout(function() {
-    $('#circle_3').circleProgress({
-      value: 0.5,
-      size: 200,
-      startAngle: -Math.PI,
-      thickness: 5,
-      fill: "#0ABAB5"
-    });
-    $('#circle_3_top').circleProgress({
-      value: 0.5,
-      size: 200,
-      startAngle: -Math.PI,
-      reverse: true,
-      emptyFill: "rgba(0, 0, 0, 0)",
-      thickness: 5,
-      fill: "#0ABAB5"
-    });
-  }, 4000);
-  setTimeout(function() {
-    $('#circle_3').removeClass('off_line').addClass('on_line')
-  }, 5000);
-
-  setTimeout(function() {
-    $('#circle_4').circleProgress({
+  var animatedCirclesDesktop = window.matchMedia("(min-width: 1200px)");
+  // If it is a desktop - run animation
+  if (animatedCirclesDesktop.matches) {
+    $('#circle_1').circleProgress({
       value: 1,
       size: 200,
-      startAngle: 1.01 * -Math.PI,
+      startAngle: 0,
       thickness: 5,
       fill: "#0ABAB5"
     });
-  }, 6000);
-  setTimeout(function() {
-    $('#circle_4').removeClass('off_line').addClass('on_line')
-  }, 7000);
+    setTimeout(function() {
+      $('#circle_1').removeClass('off_line').addClass('on_line')
+    }, 1000);
+
+    setTimeout(function() {
+      $('#circle_2').circleProgress({
+        value: 0.5,
+        size: 200,
+        startAngle: -Math.PI,
+        thickness: 5,
+        fill: "#0ABAB5"
+      });
+      $('#circle_2_top').circleProgress({
+        value: 0.5,
+        size: 200,
+        startAngle: -Math.PI,
+        reverse: true,
+        emptyFill: "rgba(0, 0, 0, 0)",
+        thickness: 5,
+        fill: "#0ABAB5"
+      });
+    }, 2000);
+    setTimeout(function() {
+      $('#circle_2').removeClass('off_line').addClass('on_line')
+    }, 3000);
+
+    setTimeout(function() {
+      $('#circle_3').circleProgress({
+        value: 0.5,
+        size: 200,
+        startAngle: -Math.PI,
+        thickness: 5,
+        fill: "#0ABAB5"
+      });
+      $('#circle_3_top').circleProgress({
+        value: 0.5,
+        size: 200,
+        startAngle: -Math.PI,
+        reverse: true,
+        emptyFill: "rgba(0, 0, 0, 0)",
+        thickness: 5,
+        fill: "#0ABAB5"
+      });
+    }, 4000);
+    setTimeout(function() {
+      $('#circle_3').removeClass('off_line').addClass('on_line')
+    }, 5000);
+
+    setTimeout(function() {
+      $('#circle_4').circleProgress({
+        value: 1,
+        size: 200,
+        startAngle: 1.01 * -Math.PI,
+        thickness: 5,
+        fill: "#0ABAB5"
+      });
+    }, 6000);
+    setTimeout(function() {
+      $('#circle_4').removeClass('off_line').addClass('on_line')
+    }, 7000);
+  }
+
 
   this.destroy();
 }, {
@@ -165,7 +185,7 @@ var progress = $('#results').waypoint(function(direction) {
   percent_2_animation.start();
   percent_3_animation.start();
   roi_animation.start();
-  $('.roi_rise').css("height","180px");
+  $('.roi_rise').css("height", "180px");
   this.destroy();
 }, {
   offset: '75%'

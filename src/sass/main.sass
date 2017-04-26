@@ -50,6 +50,10 @@ section, footer
     font-family: Raleway-Black
     font-size: 45px
     color: $accent_color
+    @media (max-width: 767px)
+      font-size: 1.3em
+    @media (max-width: 450px)
+      font-size: 1.1em
 
 // Preloader
 #page-preloader
@@ -203,6 +207,9 @@ section#why_us
     min-width: 150%
     @media (min-width: 1920px)
       min-width: 100%
+    @media (max-width: 767px)
+      min-width: 100%
+      margin-top: 75px
   .btn_own
     margin: auto
     margin-top: 50px
@@ -220,6 +227,9 @@ section#services
   ul
     font-size: 17px
     padding-left: 0
+    @media (max-width: 1199px)
+      display: inline-block
+      margin: auto
     li
       margin-bottom: 15px
       position: relative

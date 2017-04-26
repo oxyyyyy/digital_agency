@@ -71,6 +71,12 @@ section, footer {
     font-family: Raleway-Black;
     font-size: 45px;
     color: #0ABAB5; }
+    @media (max-width: 767px) {
+      .section_main_title_bold span {
+        font-size: 1.3em; } }
+    @media (max-width: 450px) {
+      .section_main_title_bold span {
+        font-size: 1.1em; } }
 
 #page-preloader {
   position: fixed;
@@ -210,6 +216,10 @@ section#why_us {
     @media (min-width: 1920px) {
       section#why_us img {
         min-width: 100%; } }
+    @media (max-width: 767px) {
+      section#why_us img {
+        min-width: 100%;
+        margin-top: 75px; } }
   section#why_us .btn_own {
     margin: auto;
     margin-top: 50px;
@@ -226,6 +236,10 @@ section#services {
   section#services ul {
     font-size: 17px;
     padding-left: 0; }
+    @media (max-width: 1199px) {
+      section#services ul {
+        display: inline-block;
+        margin: auto; } }
     section#services ul li {
       margin-bottom: 15px;
       position: relative; }

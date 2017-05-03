@@ -36,10 +36,11 @@ gulp.task('scripts', function() {
             'node_modules/tether/dist/js/tether.js',
             'node_modules/bootstrap/dist/js/bootstrap.min.js',
             'node_modules/wow.js/dist/wow.min.js',
-            'src/js/navbar.js',
+            'node_modules/particles.js/particles.js',
             'node_modules/waypoints/lib/jquery.waypoints.min.js',
             'node_modules/jquery-circle-progress/dist/circle-progress.min.js',
             'node_modules/countup.js/dist/countUp.min.js',
+            'src/js/navbar.js',
             '!src/libs/modernizr-custom.js'
         ])
         .pipe(concat('libs.min.js'))
@@ -106,7 +107,8 @@ gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs', 'imgOpti'], func
 
     var buildJs = gulp.src([
             'src/js/libs.min.js',
-            'src/js/my_main_scripts.js'
+            'src/js/my_main_scripts.js',
+            'src/js/particlesjs-config.json'
         ])
         .pipe(gulp.dest('dist/js'));
 

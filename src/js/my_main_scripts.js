@@ -223,3 +223,10 @@ $("#contact_form").submit(function(event) {
     });
 
 });
+
+// Particles.js init
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('home', 'js/particlesjs-config.json', function() {
+  console.log('callback - particles.js config loaded');
+});

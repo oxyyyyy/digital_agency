@@ -85,7 +85,7 @@ section, footer {
   right: 0;
   bottom: 0;
   background: #fff;
-  z-index: 50;
+  z-index: 1000;
   overflow: hidden; }
 
 #page-preloader .spinner {
@@ -122,7 +122,8 @@ section, footer {
   text-transform: uppercase;
   position: absolute;
   top: 50px;
-  left: 5%; }
+  left: 5%;
+  z-index: 50; }
   #header_logo span, .title_logo_type span {
     color: #3ACBC7;
     font-family: Raleway-ExtraBold;
@@ -171,9 +172,14 @@ header {
     position: absolute;
     bottom: 50px;
     transition: 0.5s;
-    color: #fff; }
+    color: #fff;
+    z-index: 50; }
     header i:hover {
       color: #0ABAB5; }
+  header .particles-js-canvas-el {
+    position: absolute;
+    left: 0;
+    top: 0; }
 
 .header_title {
   text-align: center; }

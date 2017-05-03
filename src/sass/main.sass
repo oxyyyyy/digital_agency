@@ -63,7 +63,7 @@ section, footer
     right: 0
     bottom: 0
     background: $font_white_color
-    z-index: 50
+    z-index: 1000
     overflow: hidden
 #page-preloader .spinner
     width: 128px
@@ -106,6 +106,7 @@ section, footer
   position: absolute
   top: 50px
   left: 5%
+  z-index: 50
   span
     color: $accent_color_lighter
     font-family: Raleway-ExtraBold
@@ -155,8 +156,13 @@ header
     bottom: 50px
     transition: $transitionProperty
     color: $font_white_color
+    z-index: 50
     &:hover
       color: $accent_color
+  .particles-js-canvas-el
+    position: absolute
+    left: 0
+    top: 0
 // Main <h1> title
 .header_title
   text-align: center

@@ -40,6 +40,7 @@ gulp.task('scripts', function() {
             'node_modules/waypoints/lib/jquery.waypoints.min.js',
             'node_modules/jquery-circle-progress/dist/circle-progress.min.js',
             'node_modules/countup.js/dist/countUp.min.js',
+            'node_modules/nprogress/nprogress.js',
             'src/js/navbar.js',
             '!src/libs/modernizr-custom.js'
         ])
@@ -51,6 +52,7 @@ gulp.task('scripts', function() {
 gulp.task('concatCssTaskLibs', function() {
     return gulp.src(['node_modules/bootstrap/dist/css/bootstrap.min.css',
             'node_modules/wow.js/css/libs/animate.css',
+            'node_modules/nprogress/nprogress.css',
             'src/css/navbar.css',
             'src/css/buttons.css'
         ])

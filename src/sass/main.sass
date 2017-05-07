@@ -386,7 +386,8 @@ section#contact
     #submit_btn
       cursor: pointer
       transition: $transitionProperty
-      &:hover
+      &:link, &:hover, &:focus, &:visited, &:active
+        color: $font_white_color !important
         background-color: $accent_color !important
       &:link, &:hover, &:focus, &:visited, &:active
         outline: none

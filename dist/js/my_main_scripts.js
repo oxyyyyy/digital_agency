@@ -206,12 +206,14 @@ $("#contact_form").submit(function(event) {
       },
       beforeSend: function() {
         $("#submit_btn").html('Отправка <i class="fa fa-circle-o-notch fa-spin fa-fw"></i>');
+        NProgress.start();
       },
       dataType: "json"
     })
 
     .done(function(response) {
       $("#submit_btn").html('Отправлено! <i class="fa fa-check" aria-hidden="true"></i>');
+      NProgress.done();
       // Clear the form.
       $('#name').val('');
       $('#email').val('');
@@ -225,8 +227,15 @@ $("#contact_form").submit(function(event) {
 });
 
 // Particles.js init
-
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 particlesJS.load('home', 'js/particlesjs-config.json', function() {
   console.log('callback - particles.js config loaded');
+});
+
+// NProgress
+$(document).ready(function() {
+  NProgress.start();
+});
+$(window).on('load', function() {
+  NProgress.done();
 });

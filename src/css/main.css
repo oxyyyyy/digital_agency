@@ -392,7 +392,8 @@ section#contact {
     section#contact form #submit_btn {
       cursor: pointer;
       transition: 0.5s; }
-      section#contact form #submit_btn:hover {
+      section#contact form #submit_btn:link, section#contact form #submit_btn:hover, section#contact form #submit_btn:focus, section#contact form #submit_btn:visited, section#contact form #submit_btn:active {
+        color: #fff !important;
         background-color: #0ABAB5 !important; }
       section#contact form #submit_btn:link, section#contact form #submit_btn:hover, section#contact form #submit_btn:focus, section#contact form #submit_btn:visited, section#contact form #submit_btn:active {
         outline: none;

@@ -33,6 +33,7 @@
     "countup.js": "^1.8.3",
     "jquery": "^3.2.1",
     "jquery-circle-progress": "^1.2.1",
+    "nprogress": "^0.2.0",
     "particles.js": "^2.0.0",
     "tether": "^1.4.0",
     "waypoints": "^4.0.1",

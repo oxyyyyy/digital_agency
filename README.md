@@ -1,7 +1,7 @@
 # Digital Agency
 **Landing-page**
 
-###_I have used these technologies:_###
+### _I have used these technologies:_
 * HTML5
 * CSS3
 * SASS preprocessing
@@ -17,4 +17,4 @@ Also this page is fully adaptive :sunglasses:
 
 > I'll be very pleased if you watch or star this project.
 
-You can check my work [here](https://oxyyyyy.github.io/digital_agency/)
+Check out my work [here](https://oxyyyyy.github.io/digital_agency/)
